@@ -1,0 +1,31 @@
+
+.search {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        
+    }
+
+    .searchbox {
+        width: 400px;
+        height: 35px;
+        display: flex;
+        align-items: right;
+        border-radius: 25px ;
+    }
+
+    .searchbox button {
+        width: 50px;
+        height: 35px;
+        background-color: #1d1a1a;
+        color: #fff;
+        border:none;
+        outline:none;
+        font-weight: bold;
+        border-radius: 3px;
+        transition:0.4s;
+    }
+
+    .searchbox button:hover{
+        background-color: rgb(195, 213, 248);
+    }
