@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php';
+include_once 'header3.php';
 include_once 'banner.php';
 ?>
 
@@ -35,7 +35,7 @@ if (isset($_GET['pCatID'])) {
     <div class="col-md-4 pb-3">
         <div class="card" style="border-radius: 15px;">
             <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
-                <img src="../image/<?= $row['pImage'] ?>" class="card-img-top" alt="Product1" style="margin: auto; height:480px;width: 480px;" />
+                <img src="./image/<?= $row['pImage'] ?>" class="card-img-top" alt="Product1" style="margin: auto; height:480px;width: 480px;" />
                 <a href="detail2.php?id=<?= $row['ID'] ?>">
                     <div class="mask"></div>
                 </a>

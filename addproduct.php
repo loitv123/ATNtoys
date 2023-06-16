@@ -17,7 +17,7 @@ if (isset($_POST['upproduct'])) {
     $pdes = $_POST['p_des'];
     $pquantity = $_POST['p_quantity'];
 
-    $storedPath = "../image/";
+    $storedPath = "./image/";
     $flag = move_uploaded_file($_FILES['p_image']['tmp_name'], $storedPath . $pimage);
     if ($flag) {
         $sql = "INSERT INTO `products`(`Name_product`, `pCatID`, `Sup_ID`, `pImage`, `Price`, `PDes`, `PQuantity`) VALUES (?, ?, ?, ?, ?, ?, ?)";

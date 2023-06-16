@@ -81,7 +81,7 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarMain">
       <div class="navbar-nav">
         
-        <a href="#allpro" class="nav-link">PRODUCT</a>
+        <a href="index.php" class="nav-link">PRODUCT</a>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">CATEGORY</a>
           <div class="dropdown-menu">
