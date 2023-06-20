@@ -9,7 +9,7 @@ include_once 'connect.php';
             <h1>Product </h1>
         </div>
         <form name="frm" method="post" action="">
-        <p>
+            <p>
                 <a href="addproduct.php" class="text-decoration-none">Add</a>
             </p>
             <table id="tablecategory" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -19,6 +19,7 @@ include_once 'connect.php';
                         <th><strong>Product Name</strong></th>
                         <th><strong>Product Price</strong></th>
                         <th><strong>Product Old Price</strong></th>
+                        <th><strong>Product Date</strong></th>
                         <th><strong>Delete</strong></th>
                     </tr>
                 </thead>
@@ -51,6 +52,7 @@ include_once 'connect.php';
                             <td><?= $row['Name_product'] ?></td>
                             <td><?= $productPrice ?></td>
                             <td><?= $oldPrice ?></td>
+                            <td><?= $row['date'] ?></td>
                             <td style='text-align:center'>
                                 <form action="#" method="post">
                                     <input type="hidden" name="p_id" value="<?= $row['ID'] ?>">

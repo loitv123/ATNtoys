@@ -76,7 +76,7 @@ include 'header3.php';
     <hr class="my-0" />
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
-      <button type="submit" name="btnAdd" href="detail2.php" class="btn btn-primary">Detail</button>
+      <button type="submit" name="btndetail" href="detail2.php?id<?= $row['ID'] ?>" class="btn btn-primary">Detail</button>
         <form action="addtoCart.php" method="POST">
           <input type="hidden" name="pid" value="<?= $row['ID'] ?>">
           <button type="submit" name="btnAdd" class="btn btn-primary">Buy now</button>

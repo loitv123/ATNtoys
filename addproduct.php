@@ -16,13 +16,14 @@ if (isset($_POST['upproduct'])) {
     $price = $_POST['p_price'];
     $pdes = $_POST['p_des'];
     $pquantity = $_POST['p_quantity'];
+    $pdate = $_POST['p_date'];
 
     $storedPath = "./image/";
     $flag = move_uploaded_file($_FILES['p_image']['tmp_name'], $storedPath . $pimage);
     if ($flag) {
-        $sql = "INSERT INTO `products`(`Name_product`, `pCatID`, `Sup_ID`, `pImage`, `Price`, `PDes`, `PQuantity`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO `products`(`Name_product`, `pCatID`, `Sup_ID`, `pImage`, `Price`, `PDes`, `PQuantity`,`date`) VALUES (?, ?, ?, ?, ?, ?, ?, ?    )";
         $stmt = $dblink->prepare($sql);
-        $stmt->execute(array($pname, $pcatID, $supID, $pimage, $price, $pdes, $pquantity));
+        $stmt->execute(array($pname, $pcatID, $supID, $pimage, $price, $pdes, $pquantity , $pdate));
     }
 }
 ?>
@@ -103,6 +104,12 @@ if (isset($_POST['upproduct'])) {
             endwhile;
             ?>
         </select>
+        <div class="row pb-3">
+            <label for="ProductDate" class="col-sm-2 col-form-label">Product Date</label>
+            <div class="col-sm-10">
+                <input type="date" name="p_date" id="ProductDate" class="form-control" required>
+            </div>
+        </div>
 
         <div class="row pb-3">
             <div class="d-grid col-2 mt-3 mx-auto">
